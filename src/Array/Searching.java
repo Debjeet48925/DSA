@@ -13,12 +13,30 @@ public class Searching {
         }
         return index;
     }
+    public static int binary_search(int []arr,int target)
+    {
+        int s=0;
+        int e=arr.length-1;
+
+        while(s<=e) {
+//            int mid = (s + e) / 2;
+            int mid=s+(e-s)/2;
+            if (arr[mid] == target) {
+                return mid;
+            } else if (arr[mid] > target) {
+                e = mid - 1;
+            } else {
+                s = mid + 1;
+            }
+        }
+        return -1;
+    }
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
-        int[] arr={10,20,30,55,10,20,3,4};
+        int[] arr={10,20,52,64,78,99,106};
         System.out.println("Enter the target element:");
         int target=sc.nextInt();
-        int ans=Linear_search(arr,target);
+        int ans=binary_search(arr,target);
         System.out.println(ans);
     }
 }
