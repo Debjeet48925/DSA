@@ -9,7 +9,7 @@ public class ArrayInputAnother {
         //logic->Array starting String
         String input=sc.nextLine();
         String num[]=input.split(",");
-        ArrayList<Integer>arr=new ArrayList<>();//Dynamic Array(Size is not fixed)
+        ArrayList<Integer> arr=new ArrayList<>();//Dynamic Array(Size is not fixed)
         //'1'->1
         for(String token:num)
         {
